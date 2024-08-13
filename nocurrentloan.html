@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place a Loan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            width: 100%;
+            font-family: 'Epilogue';
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            background-color: #f8f8f8;
+        }
+        .container {
+            text-align: center;
+            width: 350px;
+            color: #4F322C;
+        }
+        .container h1 {
+            margin-bottom: 10px;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+        }
+        .form-box {
+            background-color: #fff;
+            border: 1px solid #F2B0A1;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .form-box input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .container button {
+            background-color: #4F322C;
+            color: white;
+            padding: 10px 20px;
+            border: 1px solid #F2B0A1;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .container button:hover {
+            background-color: #4a2f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome {{ name }}!,</h1>
+        <h2>NJC String Orchestra</h2>
+        <div class="form-box">
+            <h2>No current loan</h2>
+            <form action="/place-loan" method="post">
+                <label for="instrument">Instrument type:</label><br>
+                <input type="text" id="instrument" name="instrument" placeholder="Type of instrument"><br><br>
+                <label for="serial">Serial number:</label><br>
+                <input type="text" id="serial" name="serial" placeholder="Serial number" disabled><br><br>
+                <label for="teacher">Endorsement by teacher:</label><br>
+                <input type="text" id="teacher" name="teacher" placeholder="Teacher’s name"><br><br>
+                <button type="submit">Place a loan</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
